@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<!-- Métadonnées de la page -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Projet MateZone</title>
+
+	<!-- Feuilles de style -->
+	<link rel="stylesheet" href="projet.css">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://m8-yuriko.github.io/docker-sae203/img/logo.png">
+</head>
+
+<body>
+	<!-- En-tête du site -->
+	<header>
+		<a href="index.html">
+			<img src="./img/logo.png" alt="Logo MateZone" class="site-logo">
+		</a>
+		<nav>
+			<ul>
+				<li><a href="index.html">← Accueil</a></li>
+				<li><a href="projet.html">Projet</a></li>
+				<li><a href="schemas.html">Aperçu</a></li>
+				<li><a href="./doc/index.html" target="_blank">Javadoc</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Contenu principal -->
+	<main>
+		<!-- Introduction -->
+		<section id="section1">
+			<h2>Introduction</h2>
+			<p>
+				Ce projet consiste en la réalisation d'une application de messagerie collaborative nommée
+				<strong>MateZone</strong>. L'objectif est de permettre à plusieurs utilisateurs de créer un compte, de
+				se connecter et d'échanger des messages via une interface graphique Java. Toutes les données (comptes et
+				messages) sont centralisées sur un serveur web (Docker, Apache, PHP).
+			</p>
+		</section>
+
+		<!-- Objectifs du projet -->
+		<section id="section2">
+			<h2>Architecture Client-Serveur</h2>
+			<ul>
+				<li>Permettre la création et la gestion de comptes utilisateurs via une interface Java conviviale.</li>
+				<li>Assurer la connexion sécurisée des utilisateurs et la vérification des identifiants côté serveur.
+				</li>
+				<li>Mettre en place un système d'échange de messages centralisé et accessible à tous les clients
+					connectés.</li>
+			</ul>
+		</section>
+
+		<!-- Schéma du projet -->
+		<section id="section3">
+			<h2>Schéma du Projet</h2>
+			<p>
+				Le projet repose sur une architecture client-serveur. Les clients Java communiquent avec un serveur web
+				(hébergé dans un conteneur Docker) qui gère les fichiers de comptes et de messages via des scripts PHP.
+				Cette organisation permet à tous les utilisateurs de partager les mêmes données et d'assurer la
+				synchronisation des messages en temps réel.
+			</p>
+		</section>
+
+		<!-- Conclusion -->
+		<section id="section4">
+			<h2>Conclusion</h2>
+			<p>
+				En conclusion, ce projet a permis de mettre en pratique le développement d'une application
+				client-serveur complète, de la gestion des utilisateurs à l'échange de messages en temps réel. La
+				collaboration et la répartition des tâches au sein de l'équipe ont été essentielles pour atteindre nos
+				objectifs techniques et fonctionnels.
+			</p>
+		</section>
+	</main>
+
+	<!-- Pied de page -->
+	<footer>
+		<p>&copy; 2025 MateZone. Tous droits réservés.</p>
+	</footer>
+</body>
+
+</html>

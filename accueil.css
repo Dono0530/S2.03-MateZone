@@ -1,0 +1,241 @@
+/* FOND animé avec dégradé violet-cyan + particules */
+html, body
+{
+	margin: 0;
+	padding: 0;
+	height: 100%; /* Assure que le body et html occupent toute la hauteur */
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #FFFFFF;
+	background: linear-gradient(135deg, #0D0D0D 40%, #8A2BE2 60%, #00FFFF 100%);
+	background-attachment: fixed;
+	background-size: 200% 200%;
+	animation: gradientShift 15s ease infinite;
+	overflow-x: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column; /* Permet de structurer le contenu en colonnes */
+}
+
+/* Animation du fond */
+@keyframes gradientShift
+{
+	0%
+	{
+		background-position: 0% 50%;
+	}
+	50%
+	{
+		background-position: 100% 50%;
+	}
+	100%
+	{
+		background-position: 0% 50%;
+	}
+}
+
+/* Particules simples en fond */
+.particles::before
+{
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: radial-gradient(#ffffff22 1px, transparent 1px);
+	background-size: 40px 40px;
+	z-index: 0;
+	pointer-events: none;
+	animation: floatParticles 30s linear infinite;
+	opacity: 0.2;
+}
+
+@keyframes floatParticles
+{
+	from
+	{
+		transform: translateY(0);
+	}
+	to
+	{
+		transform: translateY(-100px);
+	}
+}
+
+/* HEADER */
+header
+{
+	display: flex;
+	align-items: center; /* Centre verticalement le contenu */
+	justify-content: space-between; /* Espace entre le logo et la navigation */
+	padding: 10px 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	font-size: 20px;
+}
+
+header nav
+{
+	flex: 1; /* Prend tout l'espace disponible */
+	text-align: center; /* Centre la navigation horizontalement */
+}
+
+header nav ul
+{
+	list-style: none;
+	display: inline-flex; /* Affiche les éléments en ligne */
+	gap: 30px; /* Espacement entre les éléments */
+	padding: 0;
+	margin: 0;
+}
+
+header nav ul li
+{
+	margin: 0;
+}
+
+/* Liste centrée */
+.clean-centered-list
+{
+	list-style: none;
+	padding: 20px; /* Ajoute de l'espace à l'intérieur du cadre */
+	margin: 0 auto; /* Centre la liste horizontalement */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: left; /* ou center selon le rendu souhaité */
+	border: 2px solid #00bcd4; /* Ajoute une bordure colorée */
+	border-radius: 15px; /* Coins arrondis */
+	background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre portée */
+}
+
+.clean-centered-list li
+{
+	display: flex;
+	align-items: center;
+}
+
+.clean-centered-list li::before
+{
+	content: "•";
+	margin-right: 8px;
+}
+
+/* Titres principaux */
+main h2
+{
+	border-bottom: 2px solid #00bcd4;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+}
+
+/* Navigation */
+nav ul
+{
+	list-style: none; /* Supprime les styles par défaut */
+	padding: 0;
+	margin: 0;
+	text-align: center; /* Centre le contenu de la liste */
+}
+
+nav ul li
+{
+	text-align: center; /* Centre le texte de chaque élément */
+	margin: 0 10px; /* Ajoute un espacement entre les éléments */
+	list-style-position: inside; /* Place les points à l'intérieur, près du texte */
+}
+
+nav ul li a
+{
+	text-align: center; /* Centre le texte dans chaque lien */
+	display: inline-block; /* Nécessaire pour centrer le texte */
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 10px 15px;
+	border-radius: 8px;
+	transition: background 0.4s, color 0.4s;
+}
+
+nav ul li a:hover
+{
+	background: linear-gradient(90deg, #8A2BE2, #00FFFF);
+	color: #0D0D0D;
+}
+
+/* MAIN */
+main
+{
+	flex: 1; /* Prend tout l'espace disponible entre le header et le footer */
+	padding: 20px; /* Mise à jour du padding */
+	max-width: 1200px; /* Définit une largeur maximale */
+	margin: 0 auto; /* Centre horizontalement le contenu */
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* Titre principal */
+#title h1
+{
+	font-size: 48px;
+	background: linear-gradient(90deg, #8A2BE2, #00FFFF);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-bottom: 20px;
+}
+
+/* Sections */
+section
+{
+	margin-bottom: 60px;
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+/* Pied de page */
+footer
+{
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #FFFFFF;
+	text-align: center;
+	padding: 10px 0;
+	font-size: 14px;
+	position: relative;
+	z-index: 1;
+}
+
+/* Bouton de redirection */
+.redirect-button
+{
+	background-color: #57009e;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.redirect-button:hover
+{
+	background: linear-gradient(90deg, #8A2BE2, #00FFFF);
+}
+
+/* Logo du site */
+.site-logo
+{
+	height: 50px; /* Ajustez la taille du logo */
+	margin-right: 20px;
+	vertical-align: middle; /* Aligne le logo avec le texte */
+}

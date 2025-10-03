@@ -1,0 +1,157 @@
+/* Styles globaux */
+body
+{
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(135deg, #a0cfcf 20%, #4fbfbf 60%, #2aa7a7 100%);
+	color: #333;
+	font-size: 20px;
+}
+
+/* HEADER */
+header
+{
+	display: flex;
+	align-items: center; /* Centre verticalement le contenu */
+	justify-content: space-between; /* Espace entre le logo et la navigation */
+	padding: 10px 20px;
+	background-color: rgba(0, 70, 70, 0.6);
+}
+
+header nav
+{
+	flex: 1; /* Prend tout l'espace disponible */
+	text-align: center; /* Centre la navigation horizontalement */
+}
+
+header nav ul
+{
+	list-style: none;
+	display: inline-flex; /* Affiche les éléments en ligne */
+	gap: 30px; /* Espacement entre les éléments */
+	padding: 0;
+	margin: 0;
+}
+
+header nav ul li
+{
+	margin: 0;
+}
+
+/* Liens de navigation */
+nav ul li a
+{
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 10px 15px;
+	border-radius: 8px;
+	background-color: rgba(0, 60, 60, 0.2);
+	transition: background 0.4s, color 0.4s;
+}
+
+nav ul li a:hover
+{
+	background: linear-gradient(90deg, #2aa7a7, #66ffff);
+	color: #003333;
+}
+
+/* Logo du site */
+.site-logo
+{
+	height: 50px; /* Ajustez la taille du logo */
+	margin-right: 20px;
+	vertical-align: middle; /* Aligne le logo avec le texte */
+}
+
+/* Contenu principal */
+main
+{
+	padding: 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+main h2
+{
+	color: #222;
+	border-bottom: 2px solid #00bcd4;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+}
+
+main p, main ul
+{
+	line-height: 1.6;
+	margin-bottom: 20px;
+}
+
+main ul
+{
+	padding-left: 20px;
+}
+
+main ul li
+{
+	margin-bottom: 10px;
+}
+
+/* Pied de page */
+footer
+{
+	text-align: center;
+	padding: 10px 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px)
+{
+	header nav ul
+	{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	header nav ul li
+	{
+		margin: 10px 0;
+	}
+
+	main
+	{
+		padding: 10px;
+	}
+}
+
+/* Style pour les images avec un cadre élégant */
+.image-card
+{
+	border: 2px solid #00bcd4; /* Bordure colorée */
+	border-radius: 15px; /* Coins arrondis */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre portée */
+	overflow: hidden; /* Assure que le contenu reste dans les bords arrondis */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+}
+
+.image-card:hover
+{
+	transform: scale(1.05); /* Agrandit légèrement l'image au survol */
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Accentue l'ombre au survol */
+}
+
+.image-card img
+{
+	display: block; /* Supprime les espaces blancs autour de l'image */
+	height: auto; /* Conserve les proportions de l'image */
+}
+
+.image-container
+{
+	display: flex; /* Utilise Flexbox pour centrer */
+	justify-content: center; /* Centre horizontalement */
+	align-items: center; /* Centre verticalement */
+	margin: 20px 0; /* Ajoute un espacement autour des images */
+}

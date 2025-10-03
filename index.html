@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<!-- Métadonnées de la page -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Accueil - MateZone</title>
+
+	<!-- Feuilles de style -->
+	<link rel="stylesheet" href="accueil.css">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://m8-yuriko.github.io/docker-sae203/img/logo.png">
+</head>
+<body>
+	<!-- Effet de particules en arrière-plan -->
+	<div class="particles"></div>
+
+	<!-- En-tête du site -->
+	<header>
+		<a href="index.html">
+			<img src="./img/logo.png" alt="Logo MateZone" class="site-logo">
+		</a>
+		<nav>
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="projet.html">Projet</a></li>
+				<li><a href="schemas.html">Aperçu</a></li>
+				<li><a href="./doc/index.html" target="_blank">Javadoc</a></li>
+			</ul>
+		</nav>        
+	</header>
+
+	<!-- Contenu principal -->
+	<main>
+		<!-- Titre principal -->
+		<section id="title">
+			<h1>MateZone</h1>
+		</section>
+
+		<!-- Section des membres du projet -->
+		<section id="section1" class="clean-centered-list">
+			<h2>Membres du Projet</h2>
+			<ul>
+				<li>HERMILLY Joshua</li>
+				<li>LAFOSSE Lucas</li>
+				<li>PRÉVOST Donovan</li>
+				<li>VARAO GOMES DA SILVA Hugo</li>
+			</ul>
+		</section>
+
+		<!-- Description de l'application -->
+		<section id="section2">
+			<p>
+				MateZone est une application de messagerie instantanée collaborative qui permet aux utilisateurs de
+				communiquer facilement. Elle offre une plateforme pour échanger des messages en temps réel.
+			</p>
+		</section>
+
+		<!-- Bouton de redirection pour l'installation -->
+		<section id="section3">
+			<button 
+				onclick="window.location.href='https://github.com/M8-Yuriko/docker-sae203#instructions-pour-lancer-le-serveur-matezone';" 
+				class="redirect-button">
+				Installation
+			</button>
+		</section>
+	</main>
+
+	<!-- Pied de page -->
+	<footer>
+		<p>&copy; 2025 MateZone. Tous droits réservés.</p>
+	</footer>
+</body>
+</html>
+
